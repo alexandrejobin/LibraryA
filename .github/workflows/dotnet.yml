@@ -35,10 +35,8 @@ jobs:
         source-url: https://nuget.pkg.github.com/alexandrejobin/index.json
       env:
           NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-    - name: Determine version
-      run: echo "::set-env name=VERSION::$(git describe --tags --dirty)"
     - name: Pack
-      run: dotnet pack --output ./artifacts --configuration Release -p:Version=$VERSION
+      run: dotnet pack --output ./artifacts --configuration Release
     - uses: actions/upload-artifact@v1
       with:
         name: artifacts
