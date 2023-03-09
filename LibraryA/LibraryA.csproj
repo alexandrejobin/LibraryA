@@ -4,9 +4,13 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<IncludeSymbols>true</IncludeSymbols>
-	<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-	<Version>1.0.0</Version>
+    <IncludeSymbols>true</IncludeSymbols>
+	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	  <Version>1.0.0</Version>
+	  <Company>CNESST</Company>
+	  <Description>Calculatrice moderne</Description>
+	  <PackageProjectUrl></PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/alexandrejobin/LibraryA.git</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
