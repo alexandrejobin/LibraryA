@@ -21,7 +21,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --configuration Release /p:Version=${VERSION} --no-restore
+      run: dotnet build --configuration Debug /p:Version=${VERSION} --no-restore
   pack:
     runs-on: ubuntu-latest
     needs: build
@@ -34,7 +34,7 @@ jobs:
     - name: Set VERSION variable from tag
       run: echo "VERSION=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV # extract the version without the "v" character
     - name: Pack
-      run: dotnet pack --output ./artifacts --configuration Release /p:Version=${VERSION}
+      run: dotnet pack --output ./artifacts --configuration Debug /p:Version=${VERSION}
     - uses: actions/upload-artifact@v3
       with:
         name: artifacts
