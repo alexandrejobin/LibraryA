@@ -11,8 +11,11 @@
 	  <Description>Calculatrice moderne</Description>
 	  <PackageProjectUrl></PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/alexandrejobin/LibraryA.git</RepositoryUrl>
-    <!-- Include symbol files (*.pdb) in the built .nupkg -->
-    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+
+
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
   </PropertyGroup>
 
 </Project>
